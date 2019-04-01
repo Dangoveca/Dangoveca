@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class OburudvaneZaTenis {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double oneTenisRocket = Double.parseDouble(scanner.nextLine());
+        int broiRaketi = Integer.parseInt(scanner.nextLine());
+        double broiChiftoveMaratonki = Integer.parseInt(scanner.nextLine());
+
+        double rocket = broiRaketi * oneTenisRocket;
+        double maratonki = oneTenisRocket / 6;
+        double broiMaratonki = broiChiftoveMaratonki * maratonki;
+        double ostanalo = (rocket + broiMaratonki) * 0.2;
+        double prise = rocket + broiMaratonki + ostanalo;
+
+        double playerPay = Math.floor(prise/8);
+        double sponsorPay = Math.ceil(prise * 7/8);
+        System.out.printf("Price to be paid by Djokovic %.0f%n", playerPay);
+        System.out.printf("Price to be paid by sponsors %.0f", sponsorPay);
+
+    }
+}
+
